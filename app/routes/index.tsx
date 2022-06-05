@@ -52,7 +52,7 @@ export default function Index() {
                   </div>
                 )}
               </div>
-              <a href="https://remix.run">
+              <a href="https://www.wildcodeschool.com/">
                 <img
                   src="https://florentcmb.github.io/DataWild/logo%20wild.png"
                   alt="Wild School"
