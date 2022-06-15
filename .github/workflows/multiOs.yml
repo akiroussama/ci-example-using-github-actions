@@ -16,20 +16,20 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     exemple_multi_version:
-    name: ⚡️ Use many os & node versions
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
-        node: [12, 14, 16]
-        include:
-          - os: windows-latest
-            node: 16
-            npm: 6
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-      - if: ${{ matrix.npm }}
-        run: npm install -g npm@${{ matrix.npm }}
-      - run: npm --version
+        name: ⚡️ Use many os & node versions
+        strategy:
+          matrix:
+            os: [windows-latest, ubuntu-latest]
+            node: [12, 14, 16]
+            include:
+              - os: windows-latest
+                node: 16
+                npm: 6
+        runs-on: ${{ matrix.os }}
+        steps:
+          - uses: actions/setup-node@v3
+            with:
+              node-version: ${{ matrix.node }}
+          - if: ${{ matrix.npm }}
+            run: npm install -g npm@${{ matrix.npm }}
+          - run: npm --version
