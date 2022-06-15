@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: upload artifact
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+ 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  deploy:
+      name: 🚚 upload file
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+
+      - run: mkdir -p artifact
+
+      - run: echo hello > artifact/world.txt
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: artifact/world.txt
