@@ -18,6 +18,8 @@ jobs:
     exemple_multi_version:
         name: ⚡️ Use many os & node versions
         strategy:
+          # continuer à excuter les autres workflow si un échoue !!! :)
+          fail-fast: false 
           matrix:
             os: [windows-latest, ubuntu-latest]
             node: [12, 14, 16]
