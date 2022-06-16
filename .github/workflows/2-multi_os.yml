@@ -35,7 +35,7 @@ jobs:
             with:
               node-version: ${{ matrix.node }}
         
-          - name: 🔧 only install on windows npm 6
+          - name: 🔧 only install on windows & node version is 16
             if: ${{ matrix.npm }}
             run: npm install -g npm@${{ matrix.npm }}
 
@@ -44,4 +44,4 @@ jobs:
 
           #error, should use -v
           - name: 🔖 Read node version 
-            run: node -v
+            run: node --v
