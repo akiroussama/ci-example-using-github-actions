@@ -39,11 +39,9 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function App() {
   return (
     <html lang="en" className="h-full">
-      <head>
-        <Meta />
+      <head> <Meta />
         <Links />
-      </head>
-      <body className="h-full">
+      </head><body className="h-full">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
