@@ -45,7 +45,7 @@ jobs:
         run: npm list
         
 
-      - name: 📥 Download deps ✨with magic✨
+      - name: 📥 Download deps ✨with magic cache 🔮 ✨
         run: npm install
 
       - name: 🔬 Lint
