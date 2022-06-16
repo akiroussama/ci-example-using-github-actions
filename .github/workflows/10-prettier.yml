@@ -5,7 +5,7 @@ on:
       - demo-ci
   pull_request: {}
 permissions:
-  actions:  read-all|write-all
+  actions:  read|write
 
 jobs:
   lint:
