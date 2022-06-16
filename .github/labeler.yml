@@ -1,14 +1,10 @@
-review me:
-- "*"
-
-bug:
-- "**"
-
-# Add 'test' label to any change to *.spec.js files within the source dir
-test:
-- src/**/*.spec.js
-
-# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
-frontend:
-- any: ['src/**/*.js']
-  all: ['!src/main.js']
+- regExp: ".*\\.ts+$"
+  labels: ["typescript"]
+- regExp: ".*\\.sql+$"
+  labels: ["database", "critical"]
+- regExp: ".*\\.md+$"
+  labels: ["documentation"]
+- regExp: "^(pom\\.xml|package\\.json|build\\.gradle)$"
+  labels: ["dependencies"]
+- regExp: ".*\\.(zip|jar|war|ear)+$"
+  labels: ["artifact", "invalid"]
