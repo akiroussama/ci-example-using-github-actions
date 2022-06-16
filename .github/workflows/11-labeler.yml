@@ -1,6 +1,9 @@
 name: "Pull Request Labeler"
 on:
-- push
+  push:
+    branches:
+      - demo-ci
+  pull_request: {}
 
 jobs:
   triage:
@@ -12,4 +15,4 @@ jobs:
     - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/labeler-trigger.yml
+        configuration-path: .github/labeler.yml
