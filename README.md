@@ -1,6 +1,6 @@
 # Remix Indie Stack
 
-![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+![The Remix Indie Stack](https://www.wildcodeschool.com/assets/wildcodeschool-logo-meta-image-f6f2f7f52b82bfc419f031f6a989020a8b094d7a4e6676ab6f0dff0b0f470da9.png)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
@@ -170,3 +170,12 @@ This project uses ESLint for linting. That is configured in `.eslintrc.js`.
 ### Formatting
 
 We use [Prettier](https://prettier.io/) for auto-formatting in this project. It's recommended to install an editor plugin (like the [VSCode Prettier plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)) to get auto-formatting on save. There's also a `npm run format` script you can run to format all files in the project.
+
+
+[![🔬 Linting & TypeCheck 🔎](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/3-Linting_Typecheck.yml/badge.svg?branch=demo-ci)](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/3-Linting_Typecheck.yml)
+
+
+
+
+[![9-⚫️ E2E Test](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/9-E2E_test.yml/badge.svg?branch=demo-ci)](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/9-E2E_test.yml)
+

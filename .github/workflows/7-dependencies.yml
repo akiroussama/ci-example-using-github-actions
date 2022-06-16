@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Blank
+name: 7- 🧲 dependencies
 
 # Controls when the workflow will run
 on:
@@ -36,6 +36,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
       # Runs  a test workflow
       - name: Run markdown lint
         run: |

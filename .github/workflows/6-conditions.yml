@@ -1,14 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: upload artifact
+name: 6- 🎌 conditions
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main", "dev", "demo-step1" ]
+    branches: [ "demo-ci" ]
   pull_request:
-    branches: [ "main", "dev", "demo-step1" ]
+    branches:  [ "demo-ci" ]
  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,16 +17,15 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   deploy:
-      name: 🚚 upload file
+      name: 🚀 Deploy
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v2
+        - name: 🚀 Deploy Staging
+          if: ${{ github.ref == 'refs/heads/demo-ci' }}
+          run: echo deploying in staging !
 
-      - run: mkdir -p artifact
+        - name: 🚀 Deploy Production
+          if: ${{ github.ref == 'refs/heads/main' }}
+          run: echo deploying in Production !
 
-      - run: echo hello > artifact/world.txt
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: artifact/world.txt

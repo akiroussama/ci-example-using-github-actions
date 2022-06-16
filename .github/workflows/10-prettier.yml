@@ -1,0 +1,40 @@
+name: 10- 💄 Prettier & Formatting code 
+on:
+  push:
+    branches:
+      - demo-ci
+  pull_request: {}
+permissions:
+  actions: write
+
+jobs:
+  lint:
+    name: 💄 Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: 💄 Prettier
+        run: npm run format
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "fix format!"
+          commit_user_name: akiroussama
+          commit_user_email: akir.oussama@gmail.com
+          branch: demo-ci
+

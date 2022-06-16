@@ -15,11 +15,14 @@ import {
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
+// uncomment me to provoke eslint error for demo purposes
+import { getUserFromSession } from "./session.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
+//this is just a comment!
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "WS Notes",
