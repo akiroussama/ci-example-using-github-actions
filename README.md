@@ -1,6 +1,6 @@
 # Remix Indie Stack
 
-![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+![The Remix Indie Stack](https://florentcmb.github.io/DataWild/logo%20wild.png)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
