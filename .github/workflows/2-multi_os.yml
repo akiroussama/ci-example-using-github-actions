@@ -44,4 +44,4 @@ jobs:
 
           #error, should use -v
           - name: 🔖 Read node version 
-            run: node --v
+            run: node -v
