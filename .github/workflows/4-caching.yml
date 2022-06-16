@@ -25,28 +25,10 @@ jobs:
           node-version: 16
           cache: 'npm'
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
+      - name:  📥 Download deps ✨with magic cache 🔮 ✨
+        uses: bahmutov/npm-install@v1
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
-      - if: ${{ steps.cache-npm.outputs.cache-hit == 'false' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
-        
-
-      - name: 📥 Download deps ✨with magic cache 🔮 ✨
-        run: npm install
+          useLockFile: false
 
       - name: 🔬 Lint
         run: npm run lint
@@ -66,10 +48,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+      - name: 📥 Download deps without cache
+        run: npm install
 
       - name: 🔎 Type check
         run: npm run typecheck --if-present
