@@ -1,0 +1,46 @@
+  # This is a basic workflow to help you get started with Actions
+
+name: Multi Versions
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "demo-step1" ]
+  pull_request:
+    branches: [ "demo-step1" ]
+ 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    exemple_multi_version:
+        name: ⚡️ Use many os & node versions
+        strategy:
+          # continuer à excuter les autres workflow si un échoue !!! :)
+          fail-fast: false 
+          matrix:
+            os: [windows-latest, ubuntu-latest]
+            node: [12, 14, 16]
+            include:
+              - os: windows-latest
+                node: 16
+                npm: 6
+
+        runs-on: ${{ matrix.os }}
+        steps:
+          - name: ⚙️ Setup node
+            uses: actions/setup-node@v3
+            with:
+              node-version: ${{ matrix.node }}
+        
+          - name: 🔧 only install on windows npm 6
+            if: ${{ matrix.npm }}
+            run: npm install -g npm@${{ matrix.npm }}
+
+          - name: 👀 Read npm version 
+            run: npm --version
+
+          - name: 🔖 Read node version 
+            run: node --v
