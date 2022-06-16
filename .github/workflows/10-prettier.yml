@@ -31,7 +31,7 @@ jobs:
       - name: 💄 Prettier
         run: npm run format
 
-       - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "fix format!"
           commit_user_name: akiroussama
