@@ -1,4 +1,4 @@
-name: 🔬 Linting & TypeCheck 🔎
+name: 3- 🔬 Linting & TypeCheck 🔎
 on:
   push:
     branches:
