@@ -4,7 +4,8 @@ on:
     branches:
       - demo-ci
   pull_request: {}
-permissions: read-all|write-all
+  permissions: 
+    actions: read-all|write-all
 
 jobs:
   lint:
