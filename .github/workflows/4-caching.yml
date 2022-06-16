@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  withcache:
     name: 🪄 With Cache !
     runs-on: ubuntu-latest
     steps:
@@ -21,8 +21,8 @@ jobs:
       - run: npm ci
       - run: npm run test
   
-  lintz:
-    name: 🪄 With Cache !
+  withoutcache:
+    name: 🛑 Without Cache !
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
