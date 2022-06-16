@@ -1,5 +1,5 @@
 # Workflow to associate labels automatically
-name: 11 - labeler
+name: 13- 🔖labeler
 # Trigger the workflow on pull request events
 on: [pull_request]
 jobs:
