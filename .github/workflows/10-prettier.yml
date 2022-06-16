@@ -4,9 +4,7 @@ on:
     branches:
       - demo-ci
   pull_request: {}
-permissions:
-  actions: write
-  contents: read
+permissions: read-all|write-all
 
 jobs:
   lint:
@@ -31,4 +29,11 @@ jobs:
 
       - name: 💄 Prettier
         run: npm run format
+
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add .
+          git commit -m "fix format"
+          git push origin demo-ci
 
