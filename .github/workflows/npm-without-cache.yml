@@ -1,5 +1,10 @@
-name:  npm without caching
-on: push
+name: Without Caching ✨magic✨
+on:
+  push:
+    branches:
+      - demo-ci
+  pull_request: {}
+
 jobs:
   build:
     runs-on: ubuntu-latest
