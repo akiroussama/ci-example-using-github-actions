@@ -1,6 +1,6 @@
   # This is a basic workflow to help you get started with Actions
-
-name: Multi Versions
+  # and how use multi OS & Versions
+name: 🦑 Multi OS & Versions
 
 # Controls when the workflow will run
 on:
@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     exemple_multi_version:
-        name: ⚡️ Use many os & node versions
+        name: 🐙 Use many os & node versions
         strategy:
           # continuer à excuter les autres workflow si un échoue !!! :)
           fail-fast: false 
