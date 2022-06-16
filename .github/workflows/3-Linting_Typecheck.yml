@@ -2,8 +2,6 @@ name: 🔬 Linting & TypeCheck 🔎
 on:
   push:
     branches:
-      - main
-      - dev
       - demo-ci
   pull_request: {}
 permissions:
