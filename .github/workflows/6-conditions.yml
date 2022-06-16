@@ -6,9 +6,9 @@ name: conditions
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "demo-ci" ]
   pull_request:
-    branches: [ "main", "dev" ]
+    branches:  [ "demo-ci" ]
  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: 🚀 Deploy Staging
-          if: ${{ github.ref == 'refs/heads/dev' }}
+          if: ${{ github.ref == 'refs/heads/demo-ci' }}
           run: echo deploying in staging !
 
         - name: 🚀 Deploy Production
