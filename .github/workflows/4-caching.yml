@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    name: ⬣ ESLint
+  withCache:
+    name: 🪄 With Cache !
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,5 +18,16 @@ jobs:
         with:
           node-version: 14
           cache: 'npm'
+      - run: npm ci
+      - run: npm run test
+
+   withoutCache:
+    name: 🛑 Without Cache !
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
       - run: npm ci
       - run: npm run test
