@@ -173,3 +173,5 @@ We use [Prettier](https://prettier.io/) for auto-formatting in this project. It'
 
 
 [![🔬 Linting & TypeCheck 🔎](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/3-Linting_Typecheck.yml/badge.svg?branch=demo-ci)](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/3-Linting_Typecheck.yml)
+
+[![9-⚫️ E2E Test](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/9-E2E_test.yml/badge.svg?branch=demo-ci)](https://github.com/akiroussama/ci-example-using-github-actions/actions/workflows/9-E2E_test.yml)
