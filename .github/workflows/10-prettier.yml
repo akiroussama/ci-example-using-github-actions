@@ -31,10 +31,9 @@ jobs:
       - name: 💄 Prettier
         run: npm run format
 
-      - name: commit
-        run: |
-          # Stage the file, commit and push
-          git add .
-          git commit -m "fix format"
-          git push origin demo-ci
+       - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "fix format!"
+          commit_user_name: akiroussama
+          commit_user_email: akir.oussama@gmail.com
 
