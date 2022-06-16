@@ -22,6 +22,7 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
+//this is just a comment!
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "WS Notes",
