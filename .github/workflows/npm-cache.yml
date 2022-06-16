@@ -31,8 +31,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm build
-
-      - name: Test
-        run: npm test
+      - name: 🔬 Lint
+        run: npm run lint
