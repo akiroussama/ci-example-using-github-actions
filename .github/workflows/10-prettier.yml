@@ -36,4 +36,5 @@ jobs:
           commit_message: "fix format!"
           commit_user_name: akiroussama
           commit_user_email: akir.oussama@gmail.com
+          branch: demo-ci
 
