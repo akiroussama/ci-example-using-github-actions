@@ -16,7 +16,7 @@ import {
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
 // uncomment me to provoke eslint error for demo purposes
-// import { getUserFromSession } from "./session.server";
+import { getUserFromSession } from "./session.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
