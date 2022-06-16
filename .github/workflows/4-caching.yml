@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  withCache:
+  withcache:
     name: 🪄 With Cache !
     runs-on: ubuntu-latest
     steps:
@@ -21,7 +21,7 @@ jobs:
       - run: npm ci
       - run: npm run test
 
-   withoutCache:
+   withoutcache:
     name: 🛑 Without Cache !
     runs-on: ubuntu-latest
     steps:
