@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - dev
+      - demo-ci
   pull_request: {}
 permissions:
   actions: write
