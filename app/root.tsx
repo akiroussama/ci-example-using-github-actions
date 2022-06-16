@@ -39,7 +39,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 };
 
 export default function App() {
-  debugger;
   return (
     <html lang="en" className="h-full">
       <head>
